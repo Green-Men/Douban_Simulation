@@ -16,7 +16,24 @@
 
 ### 项目使用了standard这个规范。写法会比较严格，报错了，自己看错误提示解决哈,不要随意修改规则。
 
+
+### 关于css
 项目我在使用sass里的scss预处理，跟原生css写法一样。你们可以试着用用，或者干脆就用原生css也行。
+建议css写进.vue里面的style标签里面。如果使用scss就这样定义
+`<style lang="scss" scoped> </style>`
+不使用就 `<style scoped> </style>`
+scoped这个标识符是限定当前文件内的css代码只对当前文件起作用，从而不会影响别的组件，记得都加上。
+如果喜欢css提出来写的，也可以。统一放入components/common/css目录下面。
+
+### 关于axios请求数据。
+使用方法。
+```
+this.$http.get(URL).then(response => {
+    // success callback
+}, response => {
+    // error callback
+})
+```
 
 
 
