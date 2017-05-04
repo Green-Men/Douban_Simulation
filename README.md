@@ -14,7 +14,8 @@
 4. 将开发的分支合并到dev分支，先从自己分支切换到dev分支，然后 `git merge dev` 就可以成功合并到dev分支了。
 5. 删除分支，合并后的分支可以删除了。 `git branch -d dev`
 6. 你们每天写完代码，就是预计不写的时候，保证项目是可以运行的，建议是就可以commit一下，记得一定要是可以运行的，免得第二天一开始又要改bug。
-7. push的时候，网上一般都用这个 `git push -u origin master`
+7. push的时候， `git push -u origin master`；-u 代表下次默认提交到远程分支的master，origin是远程，master是远程分支名字，大家提交的时候记得是提交dev分支哈。
+
 
 ### 项目使用了standard这个规范。写法会比较严格，报错了，自己看错误提示解决哈,不要随意修改规则。
 
