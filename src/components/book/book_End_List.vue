@@ -6,7 +6,7 @@
     </div>
     <div class="outBook">
       <div class="webBook">
-        <div class="web" v-for='(item,index) in homeData'>
+        <div class="web" v-for='(item,index) in homeData'  @click='showBookMsg(item.id)'>
           <div class="book">
             <img :src="item.image">
             <p>{{item.title}}</p>
@@ -44,6 +44,15 @@ export default {
       .catch(function (error) {
         console.log(error)
       })
+  },
+  methods: {
+    showBookMsg (str) {
+      console.log(str)
+      const path = '/book/' + str
+      this.$router.push({
+        path: path
+      })
+    }
   }
 }
 </script>
