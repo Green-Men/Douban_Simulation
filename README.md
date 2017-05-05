@@ -6,7 +6,12 @@
 所有人必须使用dev分支开发，先建立一个自己的分支，开发好了之后，合并到dev分支，然后我再合并到master分支。
 
 [git分支管理](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743862006503a1c5bf5a783434581661a3cc2084efa000)
+<<<<<<< HEAD
 [git分支阮一峰](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
+=======
+<br/>
+[git远程操作详解](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
+>>>>>>> qiang
 
 一些常用的分支管理命令。
 1. 查看当前分支,前面有*的号代表当前分支  ` git branch`   。

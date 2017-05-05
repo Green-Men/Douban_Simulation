@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     showBook () {
-      const path = '/book/index'
+      const path = '/book/'
       this.$router.push({path: path})
     }
   }

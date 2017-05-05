@@ -47,7 +47,7 @@ export default {
       let randomNum = Math.floor(Math.random() * 7)
       _this.randomColor[i] = color[randomNum]
     }
-    console.log(this.randomColor)
+    // console.log(this.randomColor)
   }
 }
 </script>

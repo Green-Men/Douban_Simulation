@@ -30,7 +30,6 @@
     font-size: 1.8rem;
   }
 }
-
 a {
   display: flex;
   justify-content: center;
@@ -39,6 +38,6 @@ a {
   text-decoration: none;
   margin-top: 1.5rem;
   font-weight: 500;
-    margin-bottom: 6rem;
+  margin-bottom: 6rem;
 }
 </style>
