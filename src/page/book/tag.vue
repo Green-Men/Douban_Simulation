@@ -15,6 +15,7 @@
       </div>
       <img :src="item.image">
     </div>
+    <v-footer></v-footer>
   </div>
 </template>
 
@@ -23,6 +24,7 @@
 <script>
 import star from '../../components/star/star.vue'
 import header from '../../components/header.vue'
+import footer from '../../components/footer.vue'
 export default{
   data () {
     return {
@@ -33,7 +35,8 @@ export default{
   },
   components: {
     'v-header': header,
-    star
+    star,
+    'v-footer': footer
   },
   mounted () {
     let url = '/api/book/search?tag=' + this.$route.params.name
@@ -70,9 +73,9 @@ export default{
   color: #aaa;
   margin-top: 1rem;
   padding-bottom: 1.5rem;
+  margin-left: 1rem;
   @include border-1px(#e4e1e1);
   &:after{
-    margin-left: 1rem;
     left: 0;
     bottom: 0;
   };
