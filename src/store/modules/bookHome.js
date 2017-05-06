@@ -1,4 +1,4 @@
-import { HOME_DATA } from '../mutation-types.js'
+import { END_BOOK_DATA, WEB_BOOK_DATA, SANGWEN_BOOK_DATA, FIND_BOOK_DATA } from '../mutation-types.js'
 
 // function getCurrentUser () {
 //   return axios.get('/api/book/26939973')
@@ -7,7 +7,8 @@ import { HOME_DATA } from '../mutation-types.js'
 const state = {
   WebDataBook: {},
   EndDataBook: {},
-  lifeBook: {}
+  sangwenBook: {},
+  findBook: {}
 }
 
 // const actions = {
@@ -18,10 +19,17 @@ const state = {
 // }
 
 const mutations = {
-  [HOME_DATA] (state, Book) {
+  [WEB_BOOK_DATA] (state, Book) {
     state.WebDataBook = Book
+  },
+  [END_BOOK_DATA] (state, Book) {
     state.EndDataBook = Book
-    state.lifeBook = Book
+  },
+  [SANGWEN_BOOK_DATA] (state, Book) {
+    state.sangwenBook = Book
+  },
+  [FIND_BOOK_DATA] (state, Book) {
+    state.findBook = Book
   }
 }
 

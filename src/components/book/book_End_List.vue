@@ -2,7 +2,7 @@
   <div id="app">
     <div class="title">
       <p>{{bookName}}</p>
-      <p>更多</p>
+      <p @click='moreBook()'>更多</p>
     </div>
     <div class="outBook">
       <div class="webBook">
@@ -37,7 +37,7 @@ export default {
     var _this = this
     this.$http.get('/api/book/search?q=后端')
       .then(function (response) {
-        _this.$store.commit('HOME_DATA', response.data.books)
+        _this.$store.commit('END_BOOK_DATA', response.data.books)
         _this.homeData = _this.$store.state.home.EndDataBook
         // console.log(_this.homeData)
       })
@@ -49,6 +49,12 @@ export default {
     showBookMsg (str) {
       console.log(str)
       const path = '/book/' + str
+      this.$router.push({
+        path: path
+      })
+    },
+    moreBook () {
+      const path = '/books/' + '后端'
       this.$router.push({
         path: path
       })

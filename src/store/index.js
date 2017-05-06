@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import home from './modules/home'
+import home from './modules/bookHome.js'
 import bookMsg from './modules/bookMsg.js'
 
 Vue.use(Vuex)

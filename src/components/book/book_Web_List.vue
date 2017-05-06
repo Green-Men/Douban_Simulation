@@ -39,7 +39,7 @@ export default {
     this.$http.get('/api/book/search?q=前端')
       .then(function (response) {
         // console.log(response.data);
-        _this.$store.commit('HOME_DATA', response.data.books)
+        _this.$store.commit('WEB_BOOK_DATA', response.data.books)
         _this.homeData = _this.$store.state.home.WebDataBook
         // console.log(_this.homeData)
       })
@@ -55,7 +55,7 @@ export default {
       })
     },
     moreBook () {
-      const path = '/books/' + 'WebDataBook'
+      const path = '/books/' + '前端'
       this.$router.push({
         path: path
       })

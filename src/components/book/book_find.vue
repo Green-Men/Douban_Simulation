@@ -2,11 +2,10 @@
   <div id="app">
     <div class="title">
       <p>{{bookName}}</p>
-      <p>更多</p>
     </div>
     <div class="book">
       <ul>
-        <li v-for='(item,index) in homeData' v-if='index <= 10' :style="{color:randomColor[index]}">{{ item.title }}</li>
+        <li @click='showBookMsg(item.id)' v-for='(item,index) in homeData' v-if='index <= 10' :style="{color:randomColor[index]}">{{ item.title }}</li>
         <br>
         <li v-for='(item,index) in homeData' v-if='index >10 && index <20' :style="{color:randomColor[index]}">{{ item.title }}</li>
       </ul>
@@ -34,8 +33,8 @@ export default {
     var _this = this
     this.$http.get('/api/book/search?tag=生活')
       .then(function (response) {
-        _this.$store.commit('HOME_DATA', response.data.books)
-        _this.homeData = _this.$store.state.home.lifeBook
+        _this.$store.commit('FIND_BOOK_DATA', response.data.books)
+        _this.homeData = _this.$store.state.home.findBook
           // console.log(_this.homeData)
           // console.log(_this.randomColor)
       })
@@ -48,6 +47,14 @@ export default {
       _this.randomColor[i] = color[randomNum]
     }
     // console.log(this.randomColor)
+  },
+  methods: {
+    showBookMsg (str) {
+      const path = '/book/' + str
+      this.$router.push({
+        path: path
+      })
+    }
   }
 }
 </script>

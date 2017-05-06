@@ -46,7 +46,7 @@
     </div>
     <div class="more">
       <p>查看更多豆瓣高分好书</p>
-      <ul  v-for='(item,index) in homeData.tags'>
+      <ul @click='tags(item.title)' v-for='(item,index) in homeData.tags'>
         <li>{{item.title}}</li>
       </ul>
       <p class="clearfix"></p>
@@ -65,17 +65,15 @@ export default {
       homeData: {
         rating: {},
         author: {},
-        tags: []
+        tags: [],
+        price: ''
       },
       Kshow: true
     }
   },
   computed: {
     prices () {
-      // 将价格中的特殊字符去掉
-      let price = (this.homeData.price).replace(/[^0-9+/.]/ig, '')
-      console.log(price)
-      let sum = price * 0.7
+      let sum = (this.homeData.price.replace(/[^0-9+\\.]/g, '') * 0.7).toFixed(2)
       return sum
     }
   },
@@ -107,7 +105,12 @@ export default {
       } else {
         this.Kshow = false
       }
-      console.log(this.Kshow)
+    },
+    tags (str) {
+      const path = '/tag/' + str
+      this.$router.push({
+        path: path
+      })
     }
   }
 }

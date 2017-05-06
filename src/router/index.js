@@ -4,6 +4,7 @@ import Hello from '../components/Hello.vue'
 import book from '../page/book/index.vue'
 import showBookMsg from '../page/book/showBookMsg.vue'
 import moreBook from '../page/book/moreBook.vue'
+import tagBook from '../page/book/tag.vue'
 
 Vue.use(Router)
 
@@ -25,5 +26,9 @@ export default new Router({
     path: '/books/:name',
     name: 'moreBook',
     component: moreBook
+  }, {
+    path: '/tag/:name',
+    name: 'tagBook',
+    component: tagBook
   }]
 })

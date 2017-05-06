@@ -2,7 +2,7 @@
   <div id="app">
     <div class="title">
       <p>{{bookName}}</p>
-      <p>更多</p>
+      <p @click='moreBook()'>更多</p>
     </div>
     <div class="show">
       <img :src="homeData[0].image">
@@ -45,8 +45,8 @@ export default {
     this.$http.get('/api/book/search?q=散文')
       .then(function (response) {
         // console.log(response.data);
-        _this.$store.commit('HOME_DATA', response.data.books)
-        _this.homeData = _this.$store.state.home.EndDataBook
+        _this.$store.commit('SANGWEN_BOOK_DATA', response.data.books)
+        _this.homeData = _this.$store.state.home.sangwenBook
         // console.log(_this.homeData)
       })
       .catch(function (error) {
@@ -57,6 +57,12 @@ export default {
     showBookMsg (str) {
       console.log(str)
       const path = '/book/' + str
+      this.$router.push({
+        path: path
+      })
+    },
+    moreBook () {
+      const path = '/books/' + '散文'
       this.$router.push({
         path: path
       })
