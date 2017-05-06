@@ -1,2 +1,6 @@
 export const HOME_DATA = 'HOME_DATA'
 export const BOOK_DATA = 'BOOK_DATA'
+export const WEB_BOOK_DATA = 'WEB_BOOK_DATA'
+export const END_BOOK_DATA = 'END_BOOK_DATA'
+export const SANGWEN_BOOK_DATA = 'SANGWEN_BOOK_DATA'
+export const FIND_BOOK_DATA = 'FIND_BOOK_DATA'

@@ -6,9 +6,10 @@
     <bookShop class='book_list' bookName='豆瓣书店'></bookShop>
     <bookFind class='book_list' bookName='发现好图书'></bookFind>
     <classification></classification>
-    <v-footer></v-footer> 
+    <v-footer></v-footer>
   </div>
 </template>
+
 <script>
 import bookWebList from '../../components/book/book_Web_List.vue'
 import bookEndList from '../../components/book/book_End_List.vue'

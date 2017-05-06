@@ -3,7 +3,7 @@
     <p>分类浏览</p>
     <div>
       <ul>
-        <li v-for='(item,index) in contents'>{{ item }} <span></span></li>
+        <li @click='tags(item)' v-for='(item,index) in contents'>{{ item }} <span></span></li>
       </ul>
     </div>
   </div>
@@ -13,6 +13,14 @@ export default {
   data () {
     return {
       contents: ['小说', '爱情', '历史', '外国文学', '青春', '励志', '随笔', '传记', '推理', '旅行', '奇幻', '经营']
+    }
+  },
+  methods: {
+    tags (str) {
+      const path = '/tag/' + str
+      this.$router.push({
+        path: path
+      })
     }
   }
 }

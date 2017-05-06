@@ -41,7 +41,7 @@ p {
   color: #00b600;
   padding-left: 1rem;
   padding-top: 0.8rem;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
