@@ -6,31 +6,18 @@
 所有人必须使用dev分支开发，先建立一个自己的分支，开发好了之后，合并到dev分支，然后我再合并到master分支。
 
 [git分支管理](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743862006503a1c5bf5a783434581661a3cc2084efa000)
-<<<<<<< HEAD
-<<<<<<< HEAD
-[git分支阮一峰](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
-=======
-<br/>
-=======
 
->>>>>>> qiang
 [git远程操作详解](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
->>>>>>> qiang
+
 
 一些常用的分支管理命令。
 1. 查看当前分支,前面有*的号代表当前分支  ` git branch`   。
 2. 创建并切换分支。 `git checkout -b qiang` ,假设我在我的`qiang`分支上开发，开发完了之后，合并到`dev`分支。
 3. 切换分支`git checkout dev` 
 4. 将开发的分支合并到`dev`分支，先从自己分支切换到`dev`分支`git checkout dev` ，然后 `git merge qiang` 就可以成功将`qiang`合并到`dev`分支了。
-<<<<<<< HEAD
-5. 删除分支，合并后的分支可以删除了。 `git branch -d dev`
-=======
-5. 合并了之后，再切换回自己分支开发。
->>>>>>> qiang
+5. 合并完分支之后，可以上传到dev分支，然后记得切换回自己是分支开发。
 6. 你们每天写完代码，就是预计不写的时候，保证项目是可以运行的，建议是就可以commit一下，记得一定要是可以运行的，免得第二天一开始又要改bug。
 7. push的时候， `git push -u origin dev`；`-u` 代表下次默认提交到远程分支的`dev`，`origi`n是远程，`dev`是远程分支名字，大家提交的时候记得是提交`dev`分支哈，就是使用这个命令。
-8. 拉取分支。
-
 
 
 ### 项目使用了standard这个规范。写法会比较严格，报错了，自己看错误提示解决哈,不要随意修改规则。
